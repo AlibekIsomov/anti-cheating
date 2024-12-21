@@ -9,14 +9,13 @@ import lombok.NoArgsConstructor;
 import java.util.UUID;
 
 @Entity
-@Table(name = "user")
+@Table(name = "app_user")
 @Getter
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class User extends Auditable{
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
     private String username;
